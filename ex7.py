@@ -17,9 +17,11 @@ def game():
             print("<")
         elif kid_guess>rand_number:
             print(">")
-        else:
+            break
+        elif kid_guess==rand_number:
             print("Congratulation!!!")
             break
+    print("fail")
 game()
 
 
