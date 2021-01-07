@@ -13,15 +13,15 @@ def game():
     while tries<5:
         tries+=1
         kid_guess=int(input())
-        if kid_guess<rand_number:
+        if kid_guess<rand_number and tries<=4:
             print("<")
-        elif kid_guess>rand_number:
+        elif kid_guess>rand_number and tries<=4:
             print(">")
-            break
-        elif kid_guess==rand_number:
+        elif kid_guess==rand_number and tries<=4:
             print("Congratulation!!!")
             break
-    print("fail")
+    if tries==5:
+        print("fail")
 game()
 #
 
