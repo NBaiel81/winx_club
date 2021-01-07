@@ -6,3 +6,6 @@ while i < len(list1):
         list2.append(list1[i])
     i+=1
 print(list2)
+# or print(set(list1))
+# readlines divide into list acording to lines
+# strip remove empty lines
