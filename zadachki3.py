@@ -22,18 +22,19 @@ str1=['hello sophie how are you','hello pls help me!!!',
 def sort_mails(mails_list:list):
     file1=open('spam.txt','a')
     file2=open('mail.txt','a')
-    b=0
+
     for i in mails_list:
         i=i.lower()
-        b+=1
-        upper1 = i.isupper()
         str21 = i.endswith("!!!")
 
 
-        if "help" in i or "asap" in i or "urgent" in i or "sos" in i and upper1 is True and str21 is True:
+        if "help" in i or "asap" in i or "urgent" in i or "sos" in i:
             file1.write(i+"\n")
-        elif "help" not in i or "asap" not in i or 'sos' in i or "urgent" not in i or "sales" in i or 'buy right now' in i or upper1 is False and str21 is False:
-            file2.write(i+"\n")
+        elif "sales" in i or 'buy right now' in i or str21:
+            file1.write(i+"\n")
+        else:
+            file2.write(i + "\n")
+
 
 
 sort_mails(str1)
